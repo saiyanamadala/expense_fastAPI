@@ -6,12 +6,12 @@ DATABASE_URL = 'postgresql://nagavenkatasairamyanamadala:123456@localhost:5432/e
 
 engine = create_engine(DATABASE_URL)
 
-SessionLocal = sessionmaker(autocommit = False, autoflush= False, bind=engine)
+sessionLocal = sessionmaker(autocommit = False, autoflush= False, bind=engine)
 
 Base = declarative_base()
 
 def get_db():
-  db=SessionLocal()
+  db=sessionLocal()
   try:
     yield db
   finally:

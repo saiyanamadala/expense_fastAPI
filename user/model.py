@@ -4,7 +4,7 @@ from sqlalchemy.orm import relationship
 
 
 class User(Base):
-    __tablename__ = 'user'
+    __tablename__ = 'users'
     id = Column(Integer,primary_key=True, index=True)
     name = Column(String)
-    expenses = relationship('Expense', back_populates='user')
+    # expenses = relationship('Expense', back_populates='user')
